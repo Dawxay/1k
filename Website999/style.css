@@ -1,0 +1,32 @@
+body{
+    font-family: verdana;
+    background-color: #FFFF00;
+}
+
+/*header{
+    background-color: #008ddf;
+}*/
+#h1{
+    background-color: #008ddf;
+}
+#h2{
+    background-color: #0091cc;
+}
+#h3{
+    background-color: #0091cc;
+}
+#h4{
+    background-color: #0091a9;
+}
+#h5{
+    background-color: #0091a9;
+}
+#p1{
+    background-color: #008e7b;
+}
+#p2{
+    background-color: #008846;
+}
+#p3{
+    background-color: #008000;
+}
