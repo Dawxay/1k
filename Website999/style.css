@@ -2,31 +2,67 @@ body{
     font-family: verdana;
     background-color: #FFFF00;
 }
-
-/*header{
-    background-color: #008ddf;
-}*/
 #h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #008ddf;
+    font-size: 10rem;
+    font-weight:normal;
+    font-style:italic;
+
 }
 #h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0091cc;
+    font-size: 1.5rem;
+    font-weight:normal;
+    font-style: normal;
 }
 #h3{
-    background-color: #0091cc;
+    font-family: fantasy;
+    background-color: #00cc5f;
+    font-size: 2rem;
+    font-weight:normal;
+    font-style: normal;
 }
 #h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #0091a9;
+    font-size: 3rem;
+    font-weight:normal;
+    font-style: normal;
 }
 #h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #0091a9;
+    font-size: 1.1rem;
+    font-weight:normal;
+    font-style: italic;
 }
 #p1{
+    font-family: serif;
     background-color: #008e7b;
+    font-size: 3rem;
+    font-weight:normal;
+    font-style: italic;
 }
 #p2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #008846;
+    font-size: 1.969696969696969420rem;
+    font-weight:normal;
+    font-style: italic;
 }
 #p3{
     background-color: #008000;
+    font-size: 1rem;
+    font-weight:bold;
+    font-style:oblique;
 }
+
+/*I finished the css file!!!! 
+Ive been inactive yesterday because homework
+but I am back! It is 11:48 Apr 27 Sunday
+And I am done with learning font stuff
+I have to say I am getting quite paranoid 
+that about centering a div (: (idk when but Il get to it)
+anyway Im gonna commit it now cya!! Im also going to bed early today.
