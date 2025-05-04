@@ -20,6 +20,8 @@ h1{
     color:bisque;
 }
 #no{
+    display: block;
+    margin: auto;
     font-family: sans-serif;
     font-size: 5rem;
     color:gray;
@@ -28,17 +30,21 @@ h1{
     border-color: gray;
     padding-left: 5rem;
     border-radius: 10rem;
+    width: 35rem;
 }
 #yes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     font-family: heaven;
     font-size: 5rem;
     color:white;
-    border-style: outset;
+    border-style:double;
     border-width: 0.5rem;
-    padding-left: 5rem;
     border-color: antiquewhite;
     border-radius: 5rem;
     right: 10px;
+    width: 30rem;
 }
 body.hell{
     background-color: black;
