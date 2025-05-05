@@ -33,6 +33,7 @@ h1{
     width: 35rem;
 }
 #yes{
+    display: block;
     padding-left: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -43,7 +44,6 @@ h1{
     border-width: 0.5rem;
     border-color: antiquewhite;
     border-radius: 5rem;
-    right: 10px;
     width: 30rem;
 }
 body.hell{
