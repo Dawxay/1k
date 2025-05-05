@@ -1,7 +1,16 @@
 
-#hi {
-    width: ;
-}
-#here {
+body{
+    font-family: sans-serif;
+    background-image: url(/5815630-3840x2160-desktop-hd-4k-wallpaper-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
+#hi{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 5rem;
+}
+
