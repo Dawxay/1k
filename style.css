@@ -11,7 +11,7 @@ body{
     background-attachment: fixed;
 
 }
-#hi{
+.hi{
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -19,11 +19,16 @@ body{
     background: -webkit-linear-gradient(45deg, hsl(0deg 98% 49%) 0%, hsl(16deg 99% 49%) 8%, hsl(22deg 94% 50%) 17%, hsl(25deg 92% 53%) 25%, hsl(28deg 91% 56%) 33%, hsl(31deg 89% 59%) 42%, hsl(34deg 87% 63%) 50%, hsl(36deg 84% 67%) 58%, hsl(39deg 82% 71%) 67%, hsl(42deg 80% 76%) 75%, hsl(46deg 79% 81%) 83%, hsl(50deg 81% 87%) 92%, hsl(55deg 94% 93%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-top: 1rem;
+    opacity: 5;
+    transform: rotateX(-30deg);
+    transform-origin: bottom center;
 }
 
 
 #here{
-    font-size: 72px;
+    text-align: center;
+    font-size: 3rem;
     background: -webkit-linear-gradient(        45deg,
     hsl(0deg 98% 49%) 0%,
     hsl(16deg 99% 49%) 8%,
@@ -41,5 +46,98 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.good1 {
+    position: relative;
+    left: 80rem;
+    top: 22rem;
+    font-size: 5rem;
+    background: -webkit-linear-gradient(45deg, 
+    hsl(175deg 100% 57%) 0%,
+    hsl(179deg 100% 48%) 6%,
+    hsl(183deg 100% 48%) 13%,
+    hsl(186deg 100% 50%) 19%,
+    hsl(189deg 100% 50%) 25%,
+    hsl(192deg 100% 50%) 31%,
+    hsl(194deg 100% 50%) 37%,
+    hsl(197deg 100% 50%) 44%,
+    hsl(200deg 100% 50%) 50%,
+    hsl(203deg 100% 50%) 56%,
+    hsl(206deg 100% 50%) 63%,
+    hsl(209deg 100% 50%) 69%,
+    hsl(212deg 100% 50%) 75%,
+    hsl(216deg 100% 50%) 81%,
+    hsl(221deg 100% 50%) 87%,
+    hsl(227deg 100% 50%) 94%,
+    hsl(240deg 92% 49%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotateX(70deg);
+    transform-origin: bottom center;
+    opacity: 0.6;
+    
+}
+.good {
+    perspective: 800px;
+}
 
+.good2 {
+    position: relative;
+    left: 50rem;
+    top: 5rem;
+    font-size: 5rem;
+    background: -webkit-linear-gradient(45deg, 
+    #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotateX(80deg);
+    transform-origin: bottom center;
+    opacity: 0.5;
 
+}
+.bad {
+    perspective: 800px;
+}
+
+#na {
+    display: inline-block;
+    position: relative;
+    left: 10.5rem;
+    bottom: 8.5rem;
+    font-size: 1.2rem;
+    background: -webkit-linear-gradient(45deg, 
+    #4facfe 0%, #00f2fe 100%);
+    transform: rotateY(50deg);
+    transform-origin: bottom center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+        45deg,
+        hsl(13deg 72% 30%) 0%,
+        hsl(13deg 72% 30%) 4%,
+        hsl(14deg 72% 30%) 8%,
+        hsl(14deg 72% 30%) 13%,
+        hsl(15deg 73% 29%) 17%,
+        hsl(15deg 73% 29%) 21%,
+        hsl(15deg 73% 29%) 25%,
+        hsl(16deg 73% 29%) 29%,
+        hsl(16deg 74% 29%) 33%,
+        hsl(16deg 74% 28%) 37%,
+        hsl(17deg 74% 28%) 42%,
+        hsl(17deg 74% 28%) 46%,
+        hsl(17deg 75% 28%) 50%,
+        hsl(18deg 75% 27%) 54%,
+        hsl(18deg 75% 27%) 58%,
+        hsl(18deg 75% 27%) 63%,
+        hsl(19deg 75% 27%) 67%,
+        hsl(19deg 76% 27%) 71%,
+        hsl(19deg 76% 26%) 75%,
+        hsl(20deg 76% 26%) 79%,
+        hsl(20deg 76% 26%) 83%,
+        hsl(20deg 76% 26%) 87%,
+        hsl(21deg 76% 25%) 92%,
+        hsl(21deg 76% 25%) 96%,
+        hsl(21deg 77% 25%) 100%
+      );
+    }
+    
+}
