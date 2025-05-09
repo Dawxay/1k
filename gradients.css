@@ -1,0 +1,25 @@
+.bluegradient {
+    background: -webkit-linear-gradient(45deg, hsl(175deg 100% 57%) 0%,hsl(179deg 100% 48%) 6%, hsl(183deg 100% 48%) 13%, hsl(186deg 100% 50%) 19%, hsl(189deg 100% 50%) 25%, hsl(192deg 100% 50%) 31%, hsl(194deg 100% 50%) 37%, hsl(197deg 100% 50%) 44%, hsl(200deg 100% 50%) 50%, hsl(203deg 100% 50%) 56%, hsl(206deg 100% 50%) 63%, hsl(209deg 100% 50%) 69%, hsl(212deg 100% 50%) 75%, hsl(216deg 100% 50%) 81%, hsl(221deg 100% 50%) 87%, hsl(227deg 100% 50%) 94%, hsl(240deg 92% 49%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.redgradient {
+    background: -webkit-linear-gradient(45deg, hsl(0deg 98% 49%) 0%, hsl(16deg 99% 49%) 8%, hsl(22deg 94% 50%) 17%, hsl(25deg 92% 53%) 25%, hsl(28deg 91% 56%) 33%, hsl(31deg 89% 59%) 42%, hsl(34deg 87% 63%) 50%, hsl(36deg 84% 67%) 58%, hsl(39deg 82% 71%) 67%, hsl(42deg 80% 76%) 75%, hsl(46deg 79% 81%) 83%, hsl(50deg 81% 87%) 92%, hsl(55deg 94% 93%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.brownradient {
+    background: linear-gradient(45deg, hsl(0deg 100% 20%) 0%, hsl(360deg 96% 19%) 8%, hsl(360deg 92% 18%) 17%, hsl(360deg 87% 17%) 25%, hsl(0deg 82% 16%) 33%, hsl(1deg 79% 14%) 42%, hsl(2deg 76% 13%) 50%, hsl(3deg 74% 12%) 58%, hsl(5deg 72% 10%) 67%, hsl(5deg 72% 9%) 75%, hsl(3deg 73% 7%) 83%, hsl(1deg 77% 5%) 92%, hsl(0deg 86% 3%) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+.aquaradient {
+    background: -webkit-linear-gradient(45deg, 
+    #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
