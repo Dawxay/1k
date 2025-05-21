@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Ronzino';
+    src: url('Ronzino-Bold.otf') format('opentype');
+}
+
+body {
+    font-family: 'Ronzino';
+    background-color: #ccf986;
+}
+.heading {
+    color: #69e0de;
+    text-shadow: black 4px 4px;
+    font-size: 20rem;
+}
+
+.heading::first-letter {
+    color: red;
+}
+.heading::second-letter {
+    color: orange;
+}

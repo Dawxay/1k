@@ -46,7 +46,8 @@ body{
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
-    display: inline-block; 
+    display: inline-block;
+    transition: transform 0.1s ease-in-out;
 }
 
 .whiteborder:hover {
@@ -57,4 +58,27 @@ body{
 .whiteborder:active {
     border-style: inset;
     transform: scale(0.98);
+}
+
+.navbar {
+    background-color: #2B2D42;
+    position: fixed;
+    height: 6rem;
+    top: 0;
+    width: 100%;
+}
+.navbar_title {
+    display: flex;
+    color: #F5F5F5;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.navbar_item {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #2f4858;
+    margin-left: 40px;
+    margin-right: 40px;
 }

@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.content_wrapper{
+    display: block;
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+
+}
+.border {
+    border: 5px solid rgb(255, 0, 0);
+    margin: 100px;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.outline {
+    outline: 5px solid rgb(0, 255, 98);
+
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
