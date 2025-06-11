@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 1000px;
+}
+
+.img {
+    width: 400px;
+}
+
+.bird-img3 {
+    width: 428.5px;
+}
+.bird-wrapper {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+}
+
+
+.bird-text-wrapper {
+    display: block;
+}
+
+.bird-text {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    
+}
+
+.bt1 {
+}
