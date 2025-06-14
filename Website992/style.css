@@ -1,14 +1,30 @@
+
+@font-face {
+    font-family: 'Ronzino';
+    src: url('../Ronzino-Bold.otf') format('opentype');
+}
+
 body {
     background-color: rgb(247, 247, 247);
-    margin-bottom: 1000px;
+    font-family: 'Ronzino', sans-serif;
+}
+
+
+.Heading {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img {
     width: 400px;
+    position: sticky;
 }
 
 .bird-img3 {
     width: 428.5px;
+    position: sticky;
 }
 .bird-wrapper {
     display: flex;
@@ -23,8 +39,7 @@ body {
 
 .bird-text {
     display: flex;
-    position: absolute;
+    position: sticky;
     justify-content: center;
     
 }
-

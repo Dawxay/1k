@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Ronzino';
+    src: url('../Ronzino-Bold.otf') format('opentype');
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Ronzino', sans-serif;
+    margin: 0;
+}
+
+.square-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.square {
+    width: 20vw;
+    height: 20vw;
+    transition: background-color 0.6s;
+}
+
+.square:hover {
+  background-color: white;
+}
+
+.red {
+    background-color: red;
+}
+.orange {
+    background-color: orange;
+}
+.gold {
+    background-color: gold;
+}
+.yellow {
+    background-color: yellow;
+}
+.olive {
+    background-color: olive;
+}
+.green {
+    background-color: green;
+}
+.lime {
+    background-color: lime;
+}
+.teal {
+    background-color: teal;
+}
+.cyan {
+    background-color: cyan;
+}
+.skyblue {
+    background-color: skyblue;
+}
+.blue {
+    background-color: blue;
+}
+.navy {
+    background-color: navy;
+}
+.purple {
+    background-color: purple;
+}
+.violet {
+    background-color: violet;
+}
+.magenta {
+    background-color: magenta;
+}
+.pink {
+    background-color: pink;
+}
+.hotpink {
+    background-color: hotpink;
+}
+.salmon {
+    background-color: salmon;
+}
+.coral {
+    background-color: coral;
+}
+.tomato {
+    background-color: tomato;
+}
+.brown {
+    background-color: brown;
+}
+.chocolate {
+    background-color: chocolate;
+}
+.tan {
+    background-color: tan;
+}
+.khaki {
+    background-color: khaki;
+}
+.aquamarine {
+    background-color: aquamarine;
+}
+.turquoise {
+    background-color: turquoise;
+}
+.lightseagreen {
+    background-color: lightseagreen;
+}
+.mediumspringgreen {
+    background-color: mediumspringgreen;
+}
+.lawngreen {
+    background-color: lawngreen;
+}
+.chartreuse {
+    background-color: chartreuse;
+}
+.lemonchiffon {
+    background-color: lemonchiffon;
+}
+.peachpuff {
+    background-color: peachpuff;
+}
+.moccasin {
+    background-color: moccasin;
+}
+.sandybrown {
+    background-color: sandybrown;
+}
+.peru {
+    background-color: peru;
+}
+.sienna {
+    background-color: sienna;
+}
+.maroon {
+    background-color: maroon;
+}
+.crimson {
+    background-color: crimson;
+}
+.firebrick {
+    background-color: firebrick;
+}
+.darkorange {
+    background-color: darkorange;
+}
+.darkgoldenrod {
+    background-color: darkgoldenrod;
+}
+.darkkhaki {
+    background-color: darkkhaki;
+}
+.forestgreen {
+    background-color: forestgreen;
+}
+.mediumseagreen {
+    background-color: mediumseagreen;
+}
+.mediumturquoise {
+    background-color: mediumturquoise;
+}
+.royalblue {
+    background-color: royalblue;
+}
+.slateblue {
+    background-color: slateblue;
+}
+.indigo {
+    background-color: indigo;
+}
+.darkviolet {
+    background-color: darkviolet;
+}
+.orchid {
+    background-color: orchid;
+}
+.plum {
+    background-color: plum;
+}
+.thistle {
+    background-color: thistle;
+}
+.lavender {
+    background-color: lavender;
+}
