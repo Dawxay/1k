@@ -19,4 +19,5 @@ body {
 }
 .subheading {
     font-size: 2.5rem;
+    border: 10px groove #D2B48C;
 }
