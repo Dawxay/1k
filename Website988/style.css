@@ -1,0 +1,75 @@
+@media (max-width: 4000px){
+    body {
+        background-image: url(squiries/squrie.png);
+    }
+    .squireeANNOYED {
+        display: none;
+    }
+    .squireeMAD {
+        display: none;
+    }
+}
+@media (max-width: 1200px){
+    body {
+        background-image: url(squiries/squireANNOYED.png);
+    }
+    .squiree {
+        display: none;
+    }
+    .squireeANNOYED {
+        display: block;
+    }
+    .squireeMAD {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px){
+    body {
+        background-image: url(squiries/squireTRANSFORMING.png);
+    }
+    .squiree {
+        display: none;
+    }
+    .squireeANNOYED {
+        display: none;
+    }
+    .squireeMAD {
+        display: block;
+    }
+}
+@media (max-width: 800px){
+    body {
+        background-image: url(squiries/squireALMOSTCOMPLEATE.png);
+    }
+    .squiree {
+        display: none;
+    }
+    .squireeANNOYED {
+        display: none;
+    }
+    .squireeMAD {
+        display: none;
+    }
+}
+@media (max-width: 600px){
+    body {
+        background-image: url(squiries/squrieFINALFORM.png);
+        background-color: black;
+    }
+    .squiree {
+        display: none;
+    }
+    .squireeANNOYED {
+        display: none;
+    }
+    .squireeMAD {
+        display: none;
+    }
+}
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: center -70px;
+}
