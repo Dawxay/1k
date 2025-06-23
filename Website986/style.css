@@ -1,0 +1,25 @@
+.waldo {
+    display: inline;
+    color: white;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    border: none;
+    background-color: white;
+}
+
+.waldo:focus {
+    color: blue;
+}
+
+
+.waldo:hover {
+    color: rgb(179, 180, 181);
+}
+
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
