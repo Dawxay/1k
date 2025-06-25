@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position!</title>
+    <style>
+        body {
+  min-height: 400vh;
+}
+.fixed {
+    position: fixed;
+    color: rgb(231, 230, 230);
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    font-size: 50px;
+}
+.sticky {
+    position: sticky;
+    color: rgb(231, 230, 230);
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    font-size: 50px;
+    left: 840px;
+    top: 0;
+}
+.relative {
+    position: relative;
+    color: rgb(231, 230, 230);
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    font-size: 50px;
+    left: 300px;
+    top: 300px;
+}
+.static {
+    position: static;
+    color: rgb(231, 230, 230);
+    background-color: rgb(242, 0, 255);
+    width: 300px;
+    height: 300px;
+    font-size: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="fixed">fixed</div>
+    <div class="sticky">sticky</div>
+    <div class="relative">relative</div>
+    <div class="static">static</div>
+</body>
+</html>
