@@ -11,12 +11,9 @@ body{
     margin: 0px;
 }
 
-.heading{
+h1{
     color: rgb(180, 177, 177);
-    margin-top: 300px;
-    margin-bottom: 300px;
-    text-align: center;
-    font-size: 15vw;
+    
 }
 
 .subheading{

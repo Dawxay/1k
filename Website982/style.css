@@ -11,8 +11,10 @@
 .fox-wrapper {
     display: flex;
     border: 3px solid green;
+    width: min-content;
 }
 figure {
     border: 3px solid black;
     margin: 0;
+    width: min-content;
 }
