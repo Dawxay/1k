@@ -1,0 +1,88 @@
+
+.bg-fixed {
+  background-image: url('pastelart.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+table {
+    background-color: #f7f5f5;
+    padding: 50px;
+    border-radius: 30px;
+    color: rgb(33, 32, 32);
+}
+
+
+th, td {
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+
+}
+
+.head {
+    padding-bottom: 15px;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.time {
+    padding-right: 20px;
+}
+
+
+.activity {
+    padding-right: 20px;
+}
+
+@media (max-width: 650px) {
+table {
+    padding: 0px;
+    border-radius: 30px;
+}
+
+
+th, td {
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    padding-bottom: 0px;
+
+}
+
+.head {
+    padding-bottom: 0px;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.time {
+    padding-right: 0px;
+}
+
+
+.activity {
+    padding-right: 0px;
+}
+
+}
