@@ -49,9 +49,9 @@ th, td {
     padding-right: 20px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
 table {
-    padding: 0px;
+    padding: 10px;
     border-radius: 30px;
 }
 
@@ -60,12 +60,12 @@ th, td {
     font-weight: bold;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 1.1rem;
-    padding-bottom: 0px;
+    padding-bottom: 4px;
 
 }
 
 .head {
-    padding-bottom: 0px;
+    padding-bottom: 10px;
 }
 
 
@@ -77,12 +77,12 @@ th, td {
 }
 
 .time {
-    padding-right: 0px;
+    padding-right: 5px;
 }
 
 
 .activity {
-    padding-right: 0px;
+    padding-right: 5px;
 }
 
 }
