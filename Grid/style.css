@@ -1,11 +1,13 @@
 .container {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     background-color: pink;
     width: 1000px;
+    height: 1000px;
+    gap: 60px;
 }
 
 .container > * {
     background-color: beige;
-    padding: 5px;
 }
