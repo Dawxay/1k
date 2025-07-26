@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    background-color: pink;
+    width: 1000px;
+}
+
+.container > * {
+    background-color: beige;
+    padding: 5px;
+}
