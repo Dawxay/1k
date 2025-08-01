@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "sidebar sidebar"
+    "header main"
+    "footer footer";
+  gap: 10px;
+  height: 100vh;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+  background: #ffd700;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #87ceeb;
+}
+
+.main {
+  grid-area: main;
+  background: #90ee90;
+}
+
+.footer {
+  grid-area: footer;
+  background: #ffa07a;
+}
