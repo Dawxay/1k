@@ -13,6 +13,7 @@ body {
     display: grid;
     grid-template-columns: repeat(8, 60px);
     grid-template-rows: repeat(8, 60px); 
+
     width: min-content;
     border: 6px solid #E7D0A0;
 
