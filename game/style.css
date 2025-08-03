@@ -1,0 +1,135 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.catch-me {
+    display: flex;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 255, 94);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    animation-name: button-movements;
+    animation-duration: 10s;
+    margin: 100px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes button-movements {
+    0% {
+        transform: translate(0px, 0px);
+        background-color: brown;
+    }
+    5% {
+        transform: translateX(300px) scale(0.3) rotate(-45deg);
+        background-color: red;
+
+    }
+    10% {
+        transform: translate(500px, 100px) scale(0.6) rotate(25deg);
+        background-color: orange;
+    }
+    15% {
+        transform: translateY(400px) scale(2);
+        background-color: yellow;
+
+    }
+    20% {
+        transform: translate(100px, 500px);
+        background-color: green;
+    }
+    25% {
+        transform: translateX(800px) scaleX(2);
+        background-color: teal;
+    }
+    30% {
+        transform: translate(700px, 300px);
+        background-color: blue;
+    }
+    35% {
+        transform: translateY(600px) scaleY(4);
+        background-color: navy;
+    }
+    40% {
+        transform: translate(200px, 600px) skew(90deg);
+        background-color: purple;
+    }
+    45% {
+        transform: translateX(1000px) scale(0.6);
+        background-color: magenta;
+    }
+    50% {
+        transform: translate(800px, 100px) rotate(-150deg);
+        background-color: pink;
+    }
+    55% {
+        transform: translateY(700px);
+        background-color: lime;
+    }
+    60% {
+        transform: translate(300px, 400px) rotate(45deg);
+        background-color: cyan;
+    }
+    65% {
+        transform: translateX(900px);
+        background-color: indigo;
+    }
+    70% {
+        transform: translate(900px, 500px) scale(0.5);
+        background-color: brown;
+        
+    }
+    75% {
+        transform: translateY(100px);
+        background-color: gold;
+    }
+    80% {
+        transform: translate(500px, 700px) rotate(90deg);
+        background-color: crimson;
+    }
+    85% {
+        transform: translateX(400px);
+        background-color: chartreuse;
+    }
+    90% {
+        transform: translate(100px, 200px) rotate(-180deg);
+        background-color: darkorange;
+    }
+    95% {
+        transform: translateY(500px) scale(4);
+        background-color: violet;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        background-color: brown;
+    }
+}
+
+.heading {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: rgb-shine;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 800px;
+}
+
+@keyframes rgb-shine {
+    0%   { color: rgb(255, 0, 0); }    /* Red */
+    16%  { color: rgb(255, 255, 0); }  /* Yellow */
+    33%  { color: rgb(0, 255, 0); }    /* Green */
+    50%  { color: rgb(0, 255, 255); }  /* Cyan */
+    66%  { color: rgb(0, 0, 255); }    /* Blue */
+    83%  { color: rgb(255, 0, 255); }  /* Magenta */
+    100% { color: rgb(255, 0, 0); }    /* Back to Red */
+}
