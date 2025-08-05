@@ -1,5 +1,8 @@
-let Num1 = 2;
-let Str = "Hi";
-let Bool = false
+let a = 1 + 2;
+let b = 200 / 10;
+let c = a + b / 2;
+let d = c % 2
 
-console.log(Num1, Str, Bool)
+let calculated = false;
+console.log("The answer is", c, "and", d);
+console.log("Calculated: " + calculated);
