@@ -1,0 +1,26 @@
+{
+  "name": "1k",
+  "version": "1.0.0",
+  "description": "1k websites Ive made as projects to learn html/css/js. 1000 is the first one I made and 1 will be the last one. Pretty sure I will not be able to get there though, simply not enough to learn. So I might make it 100 projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dawxay/1k.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dawxay/1k/issues"
+  },
+  "homepage": "https://github.com/Dawxay/1k#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11"
+  }
+}
