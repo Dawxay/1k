@@ -1,38 +1,49 @@
-function isdark(row, col) {
-    return(row + col) % 2 === 0;
+const wrap = document.getElementById('wrap');
+const hi = document.getElementById('hi');
+const tw = document.getElementById('tw');
+/* .append */
+hi.textContent = 'Hi there indeed LOL';
+hi.append(' or not?');
+tw.append(' Or did I? (:');
+for (let i = 1; i < 11; i++) {
+
+    let smth = document.createElement('div');
+    smth.textContent = `Hi I was created using js! (${i})`;
+    smth.classList.add('text-white', 'text-2xl');
+    wrap.appendChild(smth);
+    let num = Math.round(Math.random() * 10) + 1;
+    switch (num) {
+    case 1:
+        smth.classList.toggle('text-red-500');
+        break;
+    case 2:
+        smth.classList.toggle('text-orange-500');
+        break;
+    case 3:
+        smth.classList.toggle('text-yellow-500');
+        break;
+    case 4:
+        smth.classList.toggle('text-green-500');
+        break;
+    case 5:
+        smth.classList.toggle('text-teal-500');
+        break;
+    case 6:
+        smth.classList.toggle('text-cyan-500');
+        break;
+    case 7:
+        smth.classList.toggle('text-blue-500');
+        break;
+    case 8:
+        smth.classList.toggle('text-purple-500');
+        break;
+    case 9:
+        smth.classList.toggle('text-pink-500');
+        break;
+    case 10:
+        smth.classList.toggle('text-gray-500');
+        break;
+    default:
+        smth.classList.toggle('text-white');
+    }
 }
-
-
-const board = [
-    ['bR', 'bN', 'bB', 'bQ', 'bK', 'bB', 'bN', 'bR'],
-    ['bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP'],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    ['wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP'],
-    ['wR', 'wN', 'wB', 'wQ', 'wK', 'wB', 'wN', 'wR'],
-];
-
-const boardElements = document.getElementById('chess-board');
-
-for(let row = 0; row < 8; row++){
-    for(let col = 0; col < 8; col++){
-        let square = document.createElement('div');
-        square.classList.add('relative', 'flex', 'items-center', 'justify-center');
-        square.classList.add(isdark(row, col) ? 'bg-[#52220B]' : 'bg-[#FCE2B2]');
-
-        
-        square.dataset.row = row;
-        square.dataset.col = col;
-        boardElements.appendChild(square);
-            const piece = board[row][col];
-    if(piece){
-        const img = document.createElement('img')
-        img.src = `pieces/${piece}.png`
-        img.classList.add('absolute', 'w-20', 'h-20');
-        img.style.top = "-40px";
-        square.appendChild(img);
-    }
-    }
-};
