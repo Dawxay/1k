@@ -6,7 +6,7 @@ hi.textContent = 'Hi there indeed LOL';
 hi.append(' or not?');
 tw.append(' Or did I? (:');
 for (let i = 1; i < 11; i++) {
-    let smth = document.createElement('div');
+    let smth = document.createElement('div'); 
     let randnum = Math.round(Math.random() * 9 + 1)
     smth.textContent = `Hi I was created using js! (${i}) (${randnum})`;
     smth.classList.add('text-white', 'text-2xl');
@@ -24,3 +24,5 @@ for (let i = 1; i < 11; i++) {
     }
     wrap.appendChild(smth);
 }
+
+
