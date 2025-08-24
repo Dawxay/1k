@@ -9,3 +9,5 @@
 body {
   background-color: #52220B;
 }
+
+.piece { will-change: transform; }

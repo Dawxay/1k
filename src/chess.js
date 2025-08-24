@@ -15,9 +15,15 @@ let board = [
   ['wR','wN','wB','wQ','wK','wB','wN','wR'],
 ];
 
+// Stable IDs for FLIP animation
+let uidBoard = board.map(row => row.map(cell => cell ? cryptoRandomId() : null));
+function cryptoRandomId(){
+  return Math.random().toString(36).slice(2,9) + Math.random().toString(36).slice(2,5);
+}
+
 // Castling rights (king/queen side)
 let castle = { wk:true, wq:true, bk:true, bq:true };
-// En passant target square for current turn (row,col) that can be captured into
+// En passant target square for current turn (row,col)
 let ep = null; // {r,c} or null
 
 // For passing special-move metadata from move-gen to doMove
@@ -55,7 +61,7 @@ function squareAttacked(b, r, c, byColor){
   }
   // sliders
   const rays = [
-    [1,0],[ -1,0],[0,1],[0,-1], // rook/queen
+    [1,0],[-1,0],[0,1],[0,-1], // rook/queen
     [1,1],[1,-1],[-1,1],[-1,-1] // bishop/queen
   ];
   for(let i=0;i<rays.length;i++){
@@ -159,13 +165,11 @@ function genPseudo(r,c){
     }
     // castling
     if(color==='w' && r===7 && c===4 && !inCheck(board,'w')){
-      // kingside: f1,g1 empty and not attacked; rook at h1; right wk
       if(castle.wk && isEmpty(7,5) && isEmpty(7,6)
          && !squareAttacked(board,7,5,'b') && !squareAttacked(board,7,6,'b')
          && board[7][7]==='wR'){
         out.push({r:7,c:6,kind:'castle',extra:{rookFrom:[7,7],rookTo:[7,5]}});
       }
-      // queenside: b1,c1,d1 empty and not attacked on d1,c1; rook at a1; right wq
       if(castle.wq && isEmpty(7,3) && isEmpty(7,2) && isEmpty(7,1)
          && !squareAttacked(board,7,3,'b') && !squareAttacked(board,7,2,'b')
          && board[7][0]==='wR'){
@@ -201,13 +205,10 @@ function legalMoves(r,c){
 
   for(const m of pseudo){
     const b2 = cloneBoard();
-    // apply move to b2
     const from = b2[r][c];
-    // en passant capture
     if(m.kind==='enpassant' && m.extra){
       b2[m.extra.captR][m.extra.captC] = null;
     }
-    // castle rook move
     if(m.kind==='castle' && m.extra){
       const [rf,cf]=m.extra.rookFrom, [rt,ct]=m.extra.rookTo;
       b2[rt][ct] = b2[rf][cf];
@@ -215,8 +216,6 @@ function legalMoves(r,c){
     }
     b2[m.r][m.c] = from;
     b2[r][c] = null;
-
-    // promotion only affects piece type, but check status same; skip here
 
     if(!inCheck(b2,color)){
       legal.push([m.r,m.c]);
@@ -230,6 +229,13 @@ function legalMoves(r,c){
 const root = document.getElementById('chess-board');
 
 function render(){
+  // FLIP: First
+  const prev = new Map();
+  root.querySelectorAll('img[data-uid]').forEach(el=>{
+    prev.set(el.dataset.uid, el.getBoundingClientRect());
+  });
+
+  // Rebuild board
   root.innerHTML = '';
   for(let r=0;r<8;r++){
     for(let c=0;c<8;c++){
@@ -242,16 +248,19 @@ function render(){
       if(pid){
         const img = document.createElement('img');
         img.src = `pieces/${pid}.png`;
-        img.className = 'pointer-events-none relative bottom-5';
+        img.className = 'pointer-events-none relative bottom-5 z-2';
+        img.dataset.uid = uidBoard[r][c]; // stable key for FLIP
         square.appendChild(img);
       }
     }
   }
+
   // selection highlight
   if(selected){
     const el = qSquare(selected.r, selected.c);
     el.classList.add('bg-green-400','transition');
   }
+
   // move dots
   if(selected){
     const moves = legalMoves(selected.r, selected.c);
@@ -267,10 +276,31 @@ function render(){
       target.appendChild(dot);
     }
   }
+
   // click handlers
   attachSquareHandlers();
   // turn banner + status
   drawTurnBadge();
+
+  // FLIP: Last, Invert, Play
+  requestAnimationFrame(()=>{
+    root.querySelectorAll('img[data-uid]').forEach(el=>{
+      const uid = el.dataset.uid;
+      const before = prev.get(uid);
+      if(!before) return;
+      const after = el.getBoundingClientRect();
+      const dx = before.left - after.left;
+      const dy = before.top  - after.top;
+      if(dx || dy){
+        el.style.transition = 'none';
+        el.style.transform = `translate(${dx}px, ${dy}px)`;
+        requestAnimationFrame(()=>{
+          el.style.transition = 'transform 480ms ease';
+          el.style.transform = 'translate(0,0)';
+        });
+      }
+    });
+  });
 }
 
 function qSquare(r,c){ return root.querySelector(`[data-row="${r}"][data-col="${c}"]`); }
@@ -311,23 +341,33 @@ function doMove(r1,c1,r2,c2){
 
   const meta = moveMeta.get(`${r2},${c2}`) || {kind:'normal'};
 
-  // handle en passant capture
+  // en passant capture
   if(meta.kind==='enpassant' && meta.extra){
     board[meta.extra.captR][meta.extra.captC] = null;
+    uidBoard[meta.extra.captR][meta.extra.captC] = null;
   }
 
-  // move rook for castling
+  // castling rook move
   if(meta.kind==='castle' && meta.extra){
     const [rf,cf]=meta.extra.rookFrom, [rt,ct]=meta.extra.rookTo;
     board[rt][ct] = board[rf][cf];
     board[rf][cf] = null;
+    uidBoard[rt][ct] = uidBoard[rf][cf];
+    uidBoard[rf][cf] = null;
   }
 
-  // move piece
+  // normal capture removes target UID
+  if(board[r2][c2] !== null){
+    uidBoard[r2][c2] = null;
+  }
+
+  // move piece + UID
   board[r2][c2] = pid;
   board[r1][c1] = null;
+  uidBoard[r2][c2] = uidBoard[r1][c1];
+  uidBoard[r1][c1] = null;
 
-  // promotion to queen
+  // promotion to queen keeps same UID
   if(typeOf(pid)==='P'){
     if((color==='w' && r2===0) || (color==='b' && r2===7)){
       board[r2][c2] = color+'Q';
@@ -345,7 +385,6 @@ function doMove(r1,c1,r2,c2){
     if(color==='b' && r1===0 && c1===0) castle.bq=false;
     if(color==='b' && r1===0 && c1===7) castle.bk=false;
   }
-  // if a rook was moved by castling, rights already irrelevant; no extra update needed
 
   // set en passant target for next player
   ep = null;
@@ -366,7 +405,6 @@ function allLegalMoves(color){
   for(let r=0;r<8;r++) for(let c=0;c<8;c++){
     const p=get(r,c);
     if(p && sideOf(p)===color){
-      // reuse legalMoves but it uses global moveMeta; avoid clobber by calling gen/filter inline
       const pseudo = genPseudo(r,c);
       for(const m of pseudo){
         const b2=cloneBoard();
@@ -394,3 +432,4 @@ function gameStatus(){
 
 // ---------- Init ----------
 document.addEventListener('DOMContentLoaded', render);
+console.log(cryptoRandomId())
