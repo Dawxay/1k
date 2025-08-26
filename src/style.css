@@ -1,13 +1,4 @@
-@font-face {
-  font-family: 'lubrifont';
-  src: url('./fonts/lubrifont.ttf') format('truetype');
-}
-
-#info-wrap {
-    font-family: 'lubrifont';
-}
 body {
-  background-color: #52220B;
+    background-color: black;
+    color: rgb(191, 189, 189);
 }
-
-.piece { will-change: transform; }
