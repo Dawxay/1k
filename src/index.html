@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
-    <title>Js</title>
+    <link rel="stylesheet" href="chess.css">
+    <script src="chess.js" defer></script>
+    <title>Chess</title>
 </head>
-<body>
-    <div class="text-4xl" id="div1"></div>
-    <div class="text-4xl" id="div2"></div>
-    <div class="text-4xl" id="div3"></div>
-    <div class="text-4xl" id="div4"></div>
-    <div class="text-4xl" id="div5"></div>
+
+<body class="bg-[#52220B]">
+    <div id="info-wrap" class="my-4 rounded-2xl flex justify-center items-center"><div id="turn-badge" class="text-6xl"></div></div>
+    <div class="flex justify-center items-center flex-col-reverse lg:flex-row ">
+        <div id="chess-board" class="aspect-square grid grid-cols-8 grid-rows-8 border-[6px] border-[#E7D0A0] max-w-175 mx-10"></div>
+    </div>
 </body>
+
 </html>
